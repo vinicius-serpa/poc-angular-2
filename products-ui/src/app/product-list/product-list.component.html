@@ -1,7 +1,8 @@
 <h2>Product List</h2>
 
-<input type="text" [(ngModel)]="name">
-<p>{{name}}</p>
+<input type="text" [(ngModel)]="product">
+<button (click)="sendProduct()">Send product</button>
+<p>{{product}}</p>
 
 <ul>
   <li *ngFor="let product of products">
