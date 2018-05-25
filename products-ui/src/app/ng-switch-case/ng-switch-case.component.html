@@ -1,0 +1,12 @@
+<h2>*ngSwitchCase structural directive</h2>
+
+<div [ngSwitch]="someNumber">
+  <p *ngSwitchCase="1">The number is one</p>
+  <p *ngSwitchCase="2">The number is two</p>
+  <p *ngSwitchCase="3">The number is three</p>
+  <p *ngSwitchCase="4">The number is four</p>
+  <p *ngSwitchCase="5">The number is five</p>
+  <p *ngSwitchDefault>The number is not defined</p>
+</div>
+
+<button (click)="increment()">Increment Number</button>
