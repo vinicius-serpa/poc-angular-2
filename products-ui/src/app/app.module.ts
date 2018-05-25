@@ -6,11 +6,13 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { AlertService } from './alert.service';
+import { InterpolationBindingComponent } from './interpolation-binding/interpolation-binding.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProductListComponent
+    ProductListComponent,
+    InterpolationBindingComponent
   ],
   imports: [
     BrowserModule,
