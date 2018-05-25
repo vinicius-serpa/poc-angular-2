@@ -1,3 +1,6 @@
-<p>
-  property-binding works!
-</p>
+<h2>Property Binding</h2>
+
+<button (click)="show()">Show paragraph</button>
+
+<p [hidden]="!showParagraph">Paragraph enabled</p>
+<p bind-hidden="!showParagraph">Paragraph enabled with bind</p>

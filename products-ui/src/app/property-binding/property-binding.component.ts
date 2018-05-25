@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PropertyBindingComponent implements OnInit {
 
+  showParagraph: boolean = true;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  show(): void {
+    this.showParagraph = !this.showParagraph;
   }
 
 }
