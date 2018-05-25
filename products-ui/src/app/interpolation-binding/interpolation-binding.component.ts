@@ -12,4 +12,12 @@ export class InterpolationBindingComponent implements OnInit {
   ngOnInit() {
   }
 
+  getBook(): string {
+    return "Angular 2";
+  }
+
+  getNumber(): number {
+    return 6;
+  }
+
 }

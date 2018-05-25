@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { AlertService } from './alert.service';
 import { InterpolationBindingComponent } from './interpolation-binding/interpolation-binding.component';
+import { PropertyBindingComponent } from './property-binding/property-binding.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductListComponent,
-    InterpolationBindingComponent
+    InterpolationBindingComponent,
+    PropertyBindingComponent
   ],
   imports: [
     BrowserModule,
