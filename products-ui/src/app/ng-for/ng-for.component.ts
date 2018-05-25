@@ -7,11 +7,30 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NgForComponent implements OnInit {
 
-  names: string [] = ['João', 'Maria', 'Thiago', 'José'];
+  people: any [] = [
+    { id: 1, name:'João' },
+    { id: 2, name:'Maria' },
+    { id: 3, name:'Thiago' },
+    { id: 4, name:'Evelin' }
+  ];
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  save(index: number, person: any): number {
+    return person.id;
+  }
+
+  update() {
+    this.people = [
+      {id:1, name:'João'},
+      {id:2, name:'Maria'},
+      {id:3, name:'Thiago'},
+      {id:4, name:'Evelin'},
+      {id:5, name:'Teodoro'}
+    ];
   }
 
 }

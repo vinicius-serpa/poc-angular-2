@@ -1,5 +1,6 @@
 <h2>*ngFor structural directive</h2>
 
-<ul *ngFor="let name of names, let i = index">
-  <li>{{ i + 1 }} - {{ name }}</li>
+<ul *ngFor="let person of people, let i = index, trackBy:save">
+  <li>{{ i + 1 }} - Id: {{ person.id }} Name: {{ person.name }}</li>
 </ul>
+<button (click)="update()">Update</button>
