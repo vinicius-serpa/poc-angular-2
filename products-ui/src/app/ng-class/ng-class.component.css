@@ -1,0 +1,15 @@
+.bg-color {
+    background-color: lightgray;
+}
+
+.word-color {
+    color: red;
+}
+
+.word-style {
+    font-style: italic;
+}
+
+.paragraph-border {
+    border: 2px green solid;
+}

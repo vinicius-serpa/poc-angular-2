@@ -1,0 +1,19 @@
+<h2>[ngClass] attribute directive</h2>
+
+<p [class.bg-color]="true">using class binding [class.mygray]="true"</p>
+<p [class.bg-color]="classBindingValue">using class binding [class.mygray]="classBindingValue"</p>
+<p [ngClass]="{'bg-color': true}">using ngClass declaring value in template</p>
+
+<p [class.bg-color]="classBindingValue"
+[class.word-color]="classBindingValue"
+[class.word-style]="classBindingValue"
+[class.paragraph-border]="classBindingValue">using class binding with some CSS class</p>
+
+<p [ngClass]="{ 'bg-color': classBindingValue,
+'word-color': classBindingValue,
+'word-style': classBindingValue,
+'paragraph-border': classBindingValue}">using ngClass with some CSS class</p>
+
+<p [ngClass]="classes()">using ngClass with component method</p>
+
+<button (click)="changeClassBinding()">Add CSS</button>
