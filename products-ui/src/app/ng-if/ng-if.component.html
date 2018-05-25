@@ -1,0 +1,13 @@
+<h2>*ngIf structural directive</h2>
+
+<div *ngIf="true">*ngIf true</div>
+<div *ngIf="false">*ngIf false</div>
+<br>
+
+<button (click)="show()">Show school name</button><br>
+<p *ngIf="getValue()">Infinite Loop Trainning</p>
+<p *ngIf="showName">Infinite Loop Trainning</p>
+
+<p *ngIf="courses.length == 0">Currently we don't have courses</p>
+<p *ngIf="courses.length > 0">Now we have courses</p>
+<button (click)="addCourse()">add new course</button>
