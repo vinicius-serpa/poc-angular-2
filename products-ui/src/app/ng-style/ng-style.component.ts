@@ -9,6 +9,8 @@ export class NgStyleComponent implements OnInit {
 
   fontValue: string = "9px";
   size: number = 10;
+  fontValidation: boolean = false;
+  colorValidation: boolean = false;
 
   constructor() { }
 
@@ -18,6 +20,14 @@ export class NgStyleComponent implements OnInit {
   increment() {
     this.size++;
     this.fontValue = this.size + 'px';
+  }
+
+  changeFont() {
+    this.fontValidation = !this.fontValidation;
+  }
+
+  changeColor() {
+    this.colorValidation = !this.colorValidation;
   }
 
 }

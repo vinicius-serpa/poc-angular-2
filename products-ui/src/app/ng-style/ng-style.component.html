@@ -5,3 +5,11 @@
 <p [style.font-size]="fontValue">class attribute value</p>
 
 <button (click)="increment()">Increment</button>
+
+<p [style.font-size]="fontValidation ? 'x-large' : 'smaller'"
+  [style.color]="colorValidation ? 'red' : 'blue'">change value with style binding and ternary condition</p>
+
+<p [ngStyle]="{'font-size': fontValidation ? 'x-large' : 'smaller','color': colorValidation ? 'red' : 'blue'}">change value with ngStyle and ternary condition</p>
+
+  <button (click)="changeFont()">change font</button>
+  <button (click)="changeColor()">change color</button>
