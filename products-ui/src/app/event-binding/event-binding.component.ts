@@ -12,4 +12,12 @@ export class EventBindingComponent implements OnInit {
   ngOnInit() {
   }
 
+  myClick() {
+    console.log("click event triggered");
+  }
+
+  digit($event) {
+    console.log($event);
+  }
+
 }
