@@ -1,4 +1,27 @@
 <h2>Event Binding</h2>
 
+<ul>
+  <li>(click)</li>
+  <li>(keyup)</li>
+  <li>(keyup.enter)</li>
+  <li>(blur)</li>
+</ul>
+
 <button (click)="myClick()">Click here</button>
 <input (keyup)="digit($event)">
+<input #myInput (keyup)="digitVarTemplate(myInput.value)">
+<br/><br/>
+<input type="password" #password (keyup)="passValidation(password.value)">
+<button [disabled]="!buttonEnabled" (click)="savePass(password.value)">Save Password</button>
+
+<h3>keyup.event add on the list</h3>
+
+<input type="text" #content (keyup.enter)="add(content.value); content.value=''">
+<ul>
+  <li *ngFor="let item of values">{{item}}</li>
+</ul>
+
+<h3>blur</h3>
+
+<input type="text" #date (blur)="checkAge(date.value)">
+<p>You are: {{age}} years old</p>
