@@ -1,0 +1,38 @@
+<h2>Form</h2>
+
+<form #myForm="ngForm" (ngSubmit)="sendData()">
+  <div>
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" [(ngModel)]="contact.name" #name="ngModel" required>
+    <div [hidden]="name.valid || name.pristine">
+      <p>Name is required</p>
+    </div>
+  </div>
+  <br>
+
+  <div ngModelGroup="allContacts" #allContacts="ngModelGroup">
+    <div>
+      <label for="phone">Phone</label>
+      <input type="text" id="phone" name="phone" [(ngModel)]="contact.phone" #phone="ngModel" required>
+      <div *ngIf="phone.invalid && phone.dirty">
+        <p>Phone is required</p>
+      </div>
+    </div>
+    <br>
+    <div>
+      <label for="email">Email</label>
+      <input type="text" id="email" name="email" [(ngModel)]="contact.email" #email="ngModel">
+      <div [hidden]="email.pristine">
+        <p>Content was changed</p>
+      </div>
+      <div *ngIf="email.touched">
+        <p>Click out of the field</p>
+      </div>
+    </div>
+  </div>
+  <br>
+  <button type="submit" [disabled]="myForm.form.invalid">Submit</button>
+</form>
+
+<p>{{allContacts}}</p>
+<p>{{allContacts.value | json}}</p>
