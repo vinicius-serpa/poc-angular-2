@@ -1,0 +1,17 @@
+<h2>@Input() / @Output()</h2>
+
+<h3>Input</h3>
+
+<ul>
+  <li *ngFor="let item of menu">
+    {{item}}
+  </li>
+</ul>
+
+<h3>Output</h3>
+
+<ul>
+  <a href="#" (click)="sendName(item)" *ngFor="let item of menu">
+    <li>{{item}}</li>
+  </a>
+</ul>

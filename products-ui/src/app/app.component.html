@@ -19,3 +19,5 @@
   <div class="body">my content</div>
 </app-ng-content>
 <app-event-binding></app-event-binding>
+<app-input-output [menu]="development" (selectedName)="getValue($event)"></app-input-output>
+<p>You select {{value}}</p>
