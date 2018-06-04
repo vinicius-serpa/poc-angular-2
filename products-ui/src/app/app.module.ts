@@ -18,6 +18,7 @@ import { NgContentComponent } from './ng-content/ng-content.component';
 import { EventBindingComponent } from './event-binding/event-binding.component';
 import { InputOutputComponent } from './input-output/input-output.component';
 import { FormComponent } from './form/form.component';
+import { DiComponent } from './di/di.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { FormComponent } from './form/form.component';
     NgContentComponent,
     EventBindingComponent,
     InputOutputComponent,
-    FormComponent
+    FormComponent,
+    DiComponent
   ],
   imports: [
     BrowserModule,
