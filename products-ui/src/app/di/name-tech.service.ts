@@ -1,15 +1,17 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Optional } from '@angular/core';
 
 import { MyLogService } from './my-log.service';
 
 @Injectable()
 export class NameTechService {
 
-  constructor(private myLog: MyLogService) { }
+  constructor(@Optional() private myLog: MyLogService) { }
 
   getNomesTec(): string[] {
     
-    this.myLog.setLog('consultou o array de tecnologias');
+    if (this.myLog) {
+      this.myLog.setLog('consultou o array de tecnologias');
+    }
 
     return ['Angular 2', 'TypeScript', 'JavaScript', 'HTML5', 'CSS3', 'Desenvolvendo com Angular 2'];
   }
