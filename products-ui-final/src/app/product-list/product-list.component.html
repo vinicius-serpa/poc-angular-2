@@ -1,0 +1,25 @@
+<h3>
+  Registered Products
+</h3>
+<div class="row justify-content-start">
+  <div class="col-9">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Name</th>
+          <th>Barcode</th>
+          <th>NCM</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr [ngStyle]="{'cursor': 'pointer'}" *ngFor="let item of productList, let i = index" (click)="selectedProduct(i)">
+          <th scope="row">{{i + 1}}</th>
+          <td>{{item.name}}</td>
+          <td>{{item.barcode}}</td>
+          <td>{{item.ncm}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
